@@ -1,0 +1,32 @@
+digraph {
+	S1_OFF
+	S1_ON
+	S2_OFF
+	S2_ON
+	S3_OFF
+	S3_ON
+	S4_OFF
+	S4_ON
+	DANGER_OFF
+	DANGER_ON
+	S1_OFF -> S2_OFF [label="v = 1"]
+	S1_OFF -> S1_ON [label="Drill ON"]
+	S1_ON -> S2_ON [label="v = 1"]
+	S1_ON -> S1_OFF [label="Drill OFF"]
+	S2_OFF -> S3_OFF [label="v = 1"]
+	S2_OFF -> S1_OFF [label="v = -1"]
+	S2_ON -> S3_ON [label="v = 1"]
+	S2_ON -> S2_OFF [label="Drill OFF"]
+	S3_OFF -> S4_OFF [label="v = 1"]
+	S3_OFF -> S2_OFF [label="v = -1"]
+	S3_ON -> S4_ON [label="v = 1"]
+	S3_ON -> S3_OFF [label="Drill OFF"]
+	S4_OFF -> DANGER_OFF [label="v = 1"]
+	S4_ON -> DANGER_ON [label="v = 1"]
+	DANGER_OFF -> S4_OFF [label="v = -1"]
+	DANGER_ON -> S4_ON [label="v = -1"]
+	S1_OFF -> DANGER_OFF [label="v = -1"]
+	S1_ON -> DANGER_ON [label="v = -1"]
+	S4_ON -> S4_OFF [label="Drill OFF"]
+	S4_OFF -> S4_ON [label="Drill ON"]
+}

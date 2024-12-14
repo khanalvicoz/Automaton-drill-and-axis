@@ -1,0 +1,27 @@
+digraph {
+	"E.E.E"
+	"P.E.E"
+	"E.E.1"
+	"E.P.E"
+	"P.E.1"
+	"E.E.2"
+	"P.P.E"
+	"P.E.2"
+	"E.P.1"
+	"P.P.1"
+	"E.P.2"
+	"P.P.2"
+	"E.E.E" -> "P.E.E" [label="charge 1"]
+	"P.E.E" -> "E.E.1" [label="discharge 1"]
+	"E.E.1" -> "E.P.E" [label="charge 2"]
+	"E.E.1" -> "P.E.1" [label="charge 1"]
+	"P.E.1" -> "P.P.E" [label="charge 2"]
+	"E.P.E" -> "P.P.E" [label="charge 1"]
+	"E.P.E" -> "E.E.2" [label="discharge 2"]
+	"P.P.E" -> "P.E.2" [label="discharge 2"]
+	"E.E.2" -> "P.E.2" [label="charge 1"]
+	"P.P.E" -> "E.P.1" [label="discharge 1"]
+	"E.P.1" -> "P.P.1" [label="charge 1"]
+	"P.E.2" -> "P.E.E" [label=store]
+	"E.E.2" -> "E.E.E" [label=store]
+}

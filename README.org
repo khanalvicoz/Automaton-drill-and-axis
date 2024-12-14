@@ -1,0 +1,20 @@
+Members:
+Vicoz Khanal, 604211
+Xinlin Zhang, 604394
+
+
+
+Linear Axis States (5 States):
+S1: 𝑥=50 mm
+S2: x=100 mm
+S3: x=500 mm
+S4: x=550 mm
+Danger State: x<50 mm or x>550 mm
+Advantages of This Approach:
+Simplifies the Model: Fewer states make the automaton easier to implement and manage.
+Ensures Safety: The "Danger" state captures any position outside the safe working range.
+Logical Transitions: Moving between these key states covers critical scenarios without unnecessary complexity.
+
+Combined with the 2 drill tool states (ON/OFF), we’ll have 10 possible system states.
+
+The guidelines given on exercises were followed, debugging still necessary.
